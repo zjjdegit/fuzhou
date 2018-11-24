@@ -51,7 +51,7 @@ export default {
         navList:[
             {name:'/index',navItem:'首页',index:'0'},
             {name:'/sjmlIndex',navItem:'数据目录',index:'1'},
-            {name:'2',navItem:'系统目录',index:'2'},
+            {name:'/xtmlIndex',navItem:'系统目录',index:'2'},
             {name:'/ywzymlIndex',navItem:'业务资源目录',index:'3'},
             {name:'4',navItem:'用户中心',index:'4'},
             {name:'5',navItem:'互动交流',index:'5'},
@@ -94,6 +94,7 @@ export default {
       },
       changeTopAct(key){
           this.activeIndex1=key;
+          console.log(key)
       }
   },
 

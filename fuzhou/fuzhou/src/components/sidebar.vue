@@ -8,7 +8,6 @@
 			class="el-menu-vertical-demo1" :collapse="isCollapse"
 			:default-active="activeLeftNav[0]"
 			:default-openeds='activeLeftNav'
-			:router='true'
 			@open="handleOpen"
 			@close="handleClose"
 			background-color="#F3F3F3"
@@ -27,7 +26,7 @@
 			</el-submenu> 
 			<el-submenu index="2">
 				<template slot="title">
-					<router-link to="">
+					<router-link to="/xtmlIndex" active-class="active">
 					<i style="margin-right:30px;"><img src="../assets/ywzyml.png" width="21px" alt=""></i>
 					<span>系统目录</span>
 					</router-link>
@@ -43,9 +42,13 @@
 					<span>业务资源目录</span>
 					</router-link>
 				</template>
-				<el-menu-item index="3-1">区域数据目录</el-menu-item>
-				<el-menu-item index="3-2">主题数据目录</el-menu-item>
-				<el-menu-item index="3-3">共享开放目录</el-menu-item>
+				<el-menu-item index="3-1">业务事项清单</el-menu-item>
+				<el-menu-item index="3-2">
+					<router-link to="/sxsjc" active-class="active">事项数据串</router-link>
+					</el-menu-item>
+				<el-menu-item index="3-3">
+					<router-link to="/wbsjxq" active-class="active">外部数据需求</router-link>
+				</el-menu-item>
 			</el-submenu>  
 			<el-submenu index="4">
 

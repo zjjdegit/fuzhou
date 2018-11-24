@@ -58,7 +58,7 @@
           <el-tabs v-model="chartsFloor2" type="card" @tab-click="secFloorHandleClick">
             <el-tab-pane label="主题数据目录" name="first">
               <div class="clearfix">
-              <button class="moreSelectBtn" @click="showMoreSelect">更多选择</button>
+              <button class="moreSelectBtn" @click="showMoreSelect">更多选择</button><span class="legend legend2"><i class="legendbg legendbg1"></i> 信息项</span><span class="legend legend1"><i class="legendbg legendbg2"></i> 信息资源</span>
               </div>
                     
               <div class="btnList" v-show="moreSelect">
@@ -97,6 +97,8 @@
         </div>
         <div class="infoRate">
           <h4>信息项重复率</h4>
+          <p class="des">排名前8信息项重复次数排列</p>
+          <p class="title">信息项名称<span>所在系统</span><span>重复次数</span></p>
           <ul class="list">
             <li v-for='(item,index) in infoList' :key="index">
               {{item.name}} <span>{{item.belong}}</span><span>{{item.repeatTime}}</span>
@@ -140,7 +142,7 @@
 <script>
 import $ from "jquery";
 import echarts from "echarts";
-import 'echarts/map/js/china.js' // 引入中国地图数据
+// import 'echarts/map/js/china.js' // 引入中国地图数据
 import {mapMutations,mapGetters} from 'vuex'
 export default {
   components: {},
@@ -214,11 +216,6 @@ export default {
         },
       ],
       infoList:[
-        {
-          name:'信息项名称',
-          repeatTime:'重复次数',
-          belong:'所在系统'
-        },
         {        
           name:'部门受案号',
           repeatTime:'50',
@@ -612,10 +609,8 @@ export default {
       this.myChart4=myChart;
     },
     makeChart5(){
-
     },
     makeChart6(){
-
     },
     makeChart7(){
       var myChart = echarts.init(document.getElementById("myChart7"));
@@ -639,14 +634,14 @@ export default {
             show: false
           }
         },
-        legend: {
-            data: ['信息资源','信息项'],
-            right:"20%",
-            top:'0',
-            itemWidth: 36,
-            itemHeight: 20,
-            itemGap: 16,
-        },
+        // legend: {
+        //     data: ['信息资源','信息项'],
+        //     right:"20%",
+        //     top:'0',
+        //     itemWidth: 36,
+        //     itemHeight: 20,
+        //     itemGap: 16,
+        // },
         yAxis: {
           type: "value",
           data: ["100", "200", "300", "400", "500"],
@@ -771,7 +766,7 @@ export default {
                         return s + '%';
                     },
                     textStyle: {
-                        color: '#fff',
+                        color: '#000',
                         fontSize: 12
                     }
                 }
@@ -862,6 +857,7 @@ export default {
                   left:10,
                   right:40,
                   x:'center',
+                  symbol:'circle',
                   symbolSize:20,
                   backgroundColor:'#000',
                   height:60,
@@ -887,7 +883,7 @@ export default {
                   },
                   itemStyle:{
                     normal:{
-                      color:'#4AA7FD',
+                      color:'#DDDDDD',
                       borderWidth:0,
                     },
                     emphasis:{
@@ -1235,6 +1231,16 @@ export default {
     // changeSelect(index){
     //   this.ckecked.shift()
     // }
+    getData() {
+                var self = this;
+                this.$http.get("front/itemMainDataShowVo/findById?id=%20149")
+.then(res=>{
+	console.log(res)
+})
+.catch(err=>{
+	console.log(err)
+})
+            },
   },
 
   created() {},
@@ -1275,7 +1281,8 @@ export default {
           if(that.myChart10){
             that.myChart10.resize();
           }
-      }
+      };
+      this.getData()
     
   
   },
@@ -1396,6 +1403,9 @@ export default {
       height: 28px !important;
       line-height: 28px !important;
     }
+    .legend{
+      width:10% !important;
+    }
 
 }
 @media screen and (max-width: 1400px) {
@@ -1403,6 +1413,33 @@ export default {
       font-size:12px !important;
       height: 24px !important;
       line-height: 24px !important;
+    }
+    .legend{
+      width:11% !important;
+    }
+
+}
+@media screen and (max-width: 1366px) {
+    .ball p{
+      font-size:12px !important;
+      height: 24px !important;
+      line-height: 24px !important;
+    }
+    .legend{
+      width:11% !important;
+      font-size:14px;
+    }
+
+}
+@media screen and (max-width: 1366px) {
+    .ball p{
+      font-size:12px !important;
+      height: 24px !important;
+      line-height: 24px !important;
+    }
+    .legend{
+      width:11% !important;
+      font-size:12px;
     }
 
 }
@@ -1567,6 +1604,29 @@ export default {
   margin-bottom: 30px;
   position: relative;
 }
+.legend{
+  float: right;
+  height: 20px;
+  line-height: 34px;
+}
+.legend{
+  margin-right: 3%;
+  width:9%;
+}
+.legendbg{
+  margin-right: 2%;
+  display: inline-block;
+  height: 20px;
+  width:40px;
+  border-radius:5px;
+      vertical-align: middle;
+}
+.legendbg2{
+  background: #14BFF2;
+}
+.legendbg1{
+  background: #F9A61A;
+}
 .moreSelectBtn{
   float: right;
   margin-right: 8%;
@@ -1623,11 +1683,19 @@ export default {
   color:#4EA9FD;
   font-weight:bold;
 }
+.infoRate .des{
+  font-weight:bold;
+}
+.infoRate .title{
+  border-bottom: 1px solid #EAEAEA;
+  height: 40px;
+  line-height: 40px;
+}
 .infoRate li{
   height: 40px;
   line-height: 40px;
 }
-.infoRate .list span{
+.infoRate span{
   text-align: center;
   float: right;
   width: 115px;

@@ -209,7 +209,7 @@ export default {
             id: 'echartPie',
             value: [32, 32, 32, 32,32],
             legend: ['表格', '证照', '证明', '文书','其他'],   
-            color: ['#B8DDFF', '#8193D7', '#D9B3E7', '#DDF7A1','#F78989'],
+            color: ['#14C1F3', '#8B6EA8', '#F9A51A', '#BFD730','#7ABC7D'],
             title: '办理材料类别',
         }
         var seriesData = []
@@ -299,7 +299,7 @@ export default {
                 id: 'echartPie',
                 value: [32, 320],
                 legend: ['纸质', '电子版'],   
-                color: ['#B8DDFF', '#F78989'],
+                color: ['#14C1F3', '#F78989'],
                 title: '办理材料格式',
             }
             var seriesData = []
@@ -386,7 +386,7 @@ export default {
        makeChart5(){
         var myChart = echarts.init(document.getElementById("myChart5"));
         myChart.setOption({
-            color: ["#B8DDFF",'#F7898A','#85BFFE'],
+            color: ["#9DDDF9",'#F7898A','#14C1F3'],
             xAxis: {
                 type: "category",
                 data: [
@@ -520,7 +520,7 @@ export default {
        makeChart6(){
             var myChart = echarts.init(document.getElementById("myChart6"));
              myChart.setOption({
-            color: ["#B9DDFF"],
+            color: ["#14C1F3"],
             xAxis: {
                 type: "category",
                 data: [
@@ -591,6 +591,9 @@ export default {
                     xAxisIndex: 0,
                     yAxisIndex: 1,
                     barGap: '-100%',
+                    label:{
+                        show:false
+                    },
                     itemStyle: {
                         normal: {
                             color: 'rgba(238,242,246,0.6)'
@@ -701,6 +704,9 @@ export default {
                     xAxisIndex: 0,
                     yAxisIndex: 1,
                     barGap: '-100%',
+                    label:{
+                        show:false
+                    },
                     itemStyle: {
                         normal: {
                             color: 'rgba(238,242,246,0.6)'

@@ -4,6 +4,10 @@ import Home from './views/Home.vue'
 import index from './components/index.vue'
 import sjmlIndex from'./components/sjmlIndex.vue'
 import ywzymlIndex from './components/ywzymlIndex.vue'
+import wbsjxq from './components/wbsjxq.vue'
+import sxsjc from './components/sxsjc.vue'
+import xtmlIndex from './components/xtmlIndex.vue'
+// import ciyun from './components/ciyun.vue'
 
 Vue.use(Router)
 
@@ -25,8 +29,28 @@ export default new Router({
         {
           path:'ywzymlIndex',
           name:'ywzymlIndex',
-          component:ywzymlIndex
+          component:ywzymlIndex,
         },
+        {
+          path:'wbsjxq',
+          name:'wbsjxq',
+          component:wbsjxq
+        },
+        {
+          path:'sxsjc',
+          name:'sxsjc',
+          component:sxsjc
+        },
+        {
+          path:'xtmlIndex',
+          name:'xtmlIndex',
+          component:xtmlIndex
+        },
+        // {
+        //   path:'ciyun',
+        //   name:'ciyun',
+        //   component:ciyun
+        // },
       ]
     },
     {
