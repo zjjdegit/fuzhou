@@ -1233,7 +1233,7 @@ export default {
     // }
     getData() {
                 var self = this;
-                this.$http.get("front/itemMainDataShowVo/findById?id=%20149")
+                this.$http.get("/movie/top250")
 .then(res=>{
 	console.log(res)
 })

@@ -91,7 +91,9 @@
                     //滑动方向
                     // direction: 'vertical',
                     //小手掌抓取滑动
-                    // grabCursor : true,
+                    grabCursor : false,
+                    noSwiping: true,
+                    noSwipingClass:'swiper-container',
                     //滑动之后回调函数
                     on: {
                         slideChangeTransitionEnd: function () {

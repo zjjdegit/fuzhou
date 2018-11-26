@@ -9,8 +9,7 @@
             <div class="close" @click="closeFn()" @play="onPlayerPause(player1)">
                 <span class="x">X</span>
             </div>
-
-            <video-player class="video-player vjs-custom-skin"
+            <video-player class="video-player play vjs-custom-skin"
                           ref="videoPlayer"
                           :playsinline="true"
                           :options="playerOptions"
@@ -19,14 +18,16 @@
             >
 
             </video-player>
+            
         </div>
+        
 
     </div>
 </template>
 
 <script>
 
-    import VideoPlayer from 'vue-video-player'
+    // import VideoPlayer from 'vue-video-player'
     import {videoPlayer} from 'vue-video-player';
 
     export default {
@@ -87,11 +88,12 @@
             showFn() {
                 this.close = true;
                 this.$refs.videoPlayer.player.play()
-
+                document.body.parentNode.style.overflow = "hidden";
             },
             closeFn() {
                 this.close = false;
                 this.$refs.videoPlayer.player.pause()
+                document.body.parentNode.style.overflow = "auto";
             }
         },
         computed: {
@@ -111,6 +113,7 @@
     .video_box {
         text-align: center;
         padding-bottom: 40px;
+        position: relative;
         .play_bg {
             width: 100%;
             height: 100%;
@@ -124,8 +127,8 @@
                 right: 0;
                 bottom: 0;
                 top: 0;
-                width: 1100px;
-                height: 600px;
+                width: 950px;
+                height: 610px;
                 margin: auto;
             }
             .x {
@@ -140,16 +143,19 @@
                 position: absolute;
                 right: -32px;
             }
+             .play {
+                position: absolute;
+                // position: fixed;
+                top: 0;
+                right: 0;
+                left: 0;
+                bottom:0;
+                margin: auto;
+                width: 950px;
+                height: 610px;
+            }
         }
-        .play {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            margin: auto;
-            width: 1100px;
-            height: 620px;
-        }
+       
         h1 {
             font-size: 26px;
             color: #222;

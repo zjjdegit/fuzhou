@@ -12,7 +12,7 @@
                         </el-col>
                     </el-col>
                     <el-col :span="8">
-                        <el-col :span="4" :offset="1">
+                        <el-col :span="4" :offset="2">
                             <span>使用状态</span>
                         </el-col>
                         <el-col :span="6">
@@ -38,12 +38,31 @@
                 </el-row>
 
             </div>
+             <div class="choice_box" v-show="array==2">
+                <!--<div class="top">
+                   <button>批量导出</button>
+                </div>-->
+                <div class="choice">
+                    <p>部门分类：</p>
+                    <el-radio-group v-model="radio">
+						<el-radio v-for="(item,index) in data2" :label="item">{{item}}</el-radio>
+					</el-radio-group>    
+                </div>
+                <!--<div class="confirm">
+                    <el-button type="primary" plain>确定</el-button>
+
+                </div>-->
+            </div>
 
 
 
             <div class="paging">
 
-                <paging v-for="n in 5" :key="n" :n1="n"></paging>
+                <paging v-for="n in num" :n1="n" v-show="array==1"></paging>
+                <paging v-for="m in num" :n1="m" v-show="array==2"></paging>
+                <paging v-for="y in num" :n1="y" v-show="array==3"></paging>
+
+
                 <div class="page">
                     <el-pagination
                             background
@@ -76,6 +95,13 @@
             },
             useTab(index) {
                 this.use = index;
+                if(index===1){
+                    this.num=5;
+                }else if(index===2){
+                    this.num=3;
+                }else {
+                    this.num=2;
+                }
             }
         },
         components: {
@@ -88,7 +114,11 @@
                 input: '',
                 array: 1,
                 use: 1,
+                num:5,
                 // flag:[0,0,0,0]
+                radio:'全部',
+
+                data2:['全部','台江区','仓山区','鼓楼区','晋安区','马尾区'],
             };
         }
     }
@@ -103,6 +133,71 @@
         background: #dee9ee;
         float: right;
     }
+
+    .choice_box {
+    	padding-left:20px ;
+        background: #ffffff;
+        overflow: hidden;
+        margin-bottom: 10px;
+        .top {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            p {
+                float: left;
+                color: #333;
+            }
+            span {
+                background: #4aa7fd;
+                float: left;
+                color: #fff;
+                margin-left: 10px;
+                padding: 0 10px;
+            }
+            button {
+                float: right;
+				cursor: pointer;
+                border: 1px solid #4aa7fd;
+                font-size: 14px;
+                width: 110px;
+                height: 30px;
+                line-height: 30px;
+                color: #333;
+                background: url("systemReview/images/down_icon.png") no-repeat 90px 10px;
+            }
+        }
+        .choice {
+            font-size: 14px;
+            color: #333;
+            margin-top: 30px;
+            p {
+                float: left;
+
+            }
+            label {
+                margin-right: 5px;
+                float: left;
+                margin-bottom: 20px;
+                margin-top: 5px;
+            }
+        }
+        .confirm {
+            clear: both;
+            .el-button {
+                width: 60px;
+                height: 30px;
+                line-height: 30px;
+                clear: both;
+                padding: 0;
+            }
+            margin-left: 70px;
+        }
+        p{
+            line-height: 25px;
+        }
+    }
+
+
 
     .box {
         background: #ffffff;
@@ -121,8 +216,8 @@
             margin: 0 !important;
         }
         h4 {
-            color: #333;
-            font-size: 16px;
+            color: #4aa7fd;
+            font-size: 18px;
             margin-bottom: 18px;
         }
 
@@ -204,6 +299,7 @@
                 font-size: 14px;
                 line-height: 32px;
                 color: #333;
+                
             }
             p {
                 font-size: 14px;

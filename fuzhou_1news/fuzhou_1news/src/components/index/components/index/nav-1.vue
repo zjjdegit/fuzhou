@@ -10,8 +10,8 @@
             <li><a href="/sjmlIndex">数据目录</a></li>
             <li><a href="/ywzymlIndex">系统目录</a></li>
             <li><a href="/ywzymlIndex">业务资源目录</a></li>
-            <li><a>用户中心</a></li>
-            <li><a>互动交流</a></li>
+            <li><a href='/jiliansystem'>级联系统</a></li>
+            <li><a href='/hdjl'>互动交流</a></li>
         </ul>
 
 
@@ -47,6 +47,7 @@
                 margin-left: 20px;
                 font-size: 26px;
                 color: #004464;
+                font-weight: 600;
             }
 
         }
@@ -71,7 +72,7 @@
             li:hover a{
                 color: #e80000;
             }
-            .on {
+            .on a{
                 color: #e80000;
             }
         }

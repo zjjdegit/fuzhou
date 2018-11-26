@@ -73,6 +73,7 @@ a{
   line-height: 82px;
   margin-top: 12px;
   margin-left: 20px;
+  font-weight: 600;
 }
 .navbarWrap{
   height: 94px;

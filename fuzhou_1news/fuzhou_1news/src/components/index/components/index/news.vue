@@ -10,68 +10,98 @@
                 </div>
                 <ul v-show="flag==1?true:false">
                     <li>
+                        <a href="/index2/details">
                         <p>1案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
+                        <a href="/index2/details">
                         <p>1案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
+                        <a href="/index2/details">
                         <p>1案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/details">
+                        <p>1案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/details">
+                        <p>1案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                 </ul>
                 <ul v-show="flag==2?true:false">
                     <li>
+                        <a href="/index2/five">
                         <p>222案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/five">
+                        <p>222案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                       <a href="/index2/five">
+                        <p>222案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/five">
+                        <p>222案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/five">
+                        <p>222案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                 </ul>
                 <ul v-show="flag==3?true:false">
                     <li>
+                        <a href="/index2/six">
                         <p>333案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/six">
+                        <p>333案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/six">
+                        <p>333案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/six">
+                        <p>333案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                     <li>
-                        <p>案件分流-待分配案件-个案流程-流程实例信息</p>
+                        <a href="/index2/six">
+                        <p>333案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </a>
                     </li>
                 </ul>
 
@@ -83,8 +113,10 @@
                 </div>
                 <ul>
                     <li>
+                        <router-link :to="{path:'/index2/details',query: {name: id}}">
                         <p>案件分流-待分配案件-个案流程-流程实例信息</p>
                         <span>来源：鼓楼区检察院<em>2018-12-15</em></span>
+                        </router-link>
                     </li>
                     <li>
                         <p>案件分流-待分配案件-个案流程-流程实例信息</p>
@@ -114,7 +146,8 @@
         data() {
             return {
                 flag:1,
-                close:false
+                close:false,
+                id:'3'
             }
         },
         mounted() {
@@ -174,6 +207,10 @@
                     font-size: 16px;
                     color: #222;
                     margin-bottom: 20px;
+                    p{
+                    color: #000;
+
+                    }
                     span {
                         display: block;
                         font-size: 14px;
@@ -211,6 +248,10 @@
                     font-size: 16px;
                     color: #222;
                     margin-bottom: 20px;
+                     p{
+                    color: #000;
+
+                    }
                     span {
                         display: block;
                         font-size: 14px;

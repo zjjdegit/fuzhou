@@ -12,7 +12,7 @@
 				<div class="two_fenlei">
 					<span class="bmfl">区域选择：</span>
           <el-radio-group v-model="radio">
-						<el-radio v-for="item,index) in checklists" :label="index">{{item}}</el-radio>
+						<el-radio v-for="(item,index) in checklists" :label="index">{{item}}</el-radio>
 					</el-radio-group>
 				</div>
 			</form>

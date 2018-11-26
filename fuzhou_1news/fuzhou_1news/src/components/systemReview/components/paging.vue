@@ -83,6 +83,7 @@
                 line-height: 32px;
                 color: #333;
                 padding-bottom: 10px;
+                font-weight: bold;
             }
             button {
                 span {
@@ -105,6 +106,7 @@
                 font-size: 14px;
                 line-height: 32px;
                 color: #333;
+                font-weight: bold;
             }
             p {
                 font-size: 14px;

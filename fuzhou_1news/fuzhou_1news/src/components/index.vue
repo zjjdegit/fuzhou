@@ -55,7 +55,7 @@
                 indexHide: true,
 
                 navList: [
-                    {name: '/index', navItem: '首页', index: '0'},
+                    {name: '/index1', navItem: '首页', index: '0'},
                     {name: '/sjmlIndex', navItem: '数据目录', index: '1'},
                     {name: 'xtmlIndex', navItem: '系统目录', index: '2'},
                     {name: '/ywzymlIndex', navItem: '业务资源目录', index: '3'},

@@ -21,7 +21,7 @@
 			
 		</div>
 		<div class="bottom">		
-	      	<el-tabs type="border-card" > 
+	      	<el-tabs type="border-card" v-model="editableTabsValue"> 
 			  	<el-tab-pane style="font-size: 14px;">
 			  	<span slot='label'><i class="el-icon-warning"></i>基本信息</span>
 			  	<h4>基本信息</h4>
@@ -409,6 +409,7 @@ export default {
           belong:'80'
         }
       ],
+      editableTabsValue:'0',
     	biaoqian:'基本信息，电话，机构名称，地址，团体',
 	}
   },
@@ -740,7 +741,10 @@ export default {
 
   mounted(){
 	 this.makeChart10();
-
+        console.log(this.$route.query.name)
+        if(this.$route.query.name==3){
+            this.editableTabsValue="3"
+        }
 	}
 }
 </script>

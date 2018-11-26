@@ -11,28 +11,12 @@
                     </div>
                     <div class="bot_box">
                         <div class="bot " :class="{scroll:item.text.length>3?true:false}">
-                            <p>腾讯移动分析（MTA） <a href="">详情</a>
-                                <br>
-                                APP核心指标多维度分析、自定义事件统计</p>
-
-                            <p>HTML5数据分析 <a href="">详情</a>
-                                <br>
-                                支持微信内H5页面流向分析、用户行为分析义事件分析</p>
-                            <p>微信小程序分析 <a href="">详情</a>
-                                <br>
-                                微信小程序应用和客户分析、自定义事件分析</p>
-                            <p>微信小程序分析 <a href="">详情</a>
-                                <br>
-                                微信小程序应用和客户分析、自定义事件分析</p>
-                            <p>微信小程序分析 <a href="">详情</a>
-                                <br>
-                                微信小程序应用和客户分析、自定义事件分析</p>
-                            <p>微信小程序分析 <a href="">详情</a>
-                                <br>
-                                微信小程序应用和客户分析、自定义事件分析</p>
-                            <p>微信小程序分析 <a href="">详情</a>
-                                <br>
-                                微信小程序应用和客户分析、自定义事件分析</p>
+                            <h5>腾讯移动分析（MTA） <a href="">详情</a></h5>
+                            <p>APP核心指标多维度分析、自定义事件统计</p>
+                            <h5>HTML5数据分析 <a href="">详情</a></h5>
+                            <p>支持微信内H5页面流向分析、用户行为分析义事件分析</p>
+                            <h5>微信小程序分析 <a href="">详情</a></h5>
+                            <p>微信小程序应用和客户分析、自定义事件分析</p>
                         </div>
                     </div>
                 </li>
@@ -43,17 +27,26 @@
                         <p>部门目录</p>
                     </div>
                     <div class="bot_box">
-                        <div class="bot" ref="bot">
+                        <div class="bot" ref="bot" :class="{scroll:item.text.length>3?true:false}">
                             <!--<img class="yuan1" v-show="itemHoverIndex==1?false:true" src="../../images/business_yuan.png">-->
-                            <p>侦察监督 <a href="">详情</a>
+                            <p>侦察监督 
                                 <br>
                                 APP核心指标多维度分析、自定义事件统计
                             </p>
-                            <p>公诉 <a href="">详情</a>
+                            <p>公诉 
                                 <br>
                                 支持微信内H5页面流向分析、用户行为分析
                             </p>
-                            <p>反贪污贿赂 <a href="">详情</a>
+                            <p>反贪污贿赂 
+                                <br>
+                                微信小程序应用和客户分析、自定义事件分析</p>
+                                <p>微信小程序分析 
+                                <br>
+                                微信小程序应用和客户分析、自定义事件分析</p>
+                            <p>微信小程序分析 
+                                <br>
+                                微信小程序应用和客户分析、自定义事件分析</p>
+                            <p>微信小程序分析 
                                 <br>
                                 微信小程序应用和客户分析、自定义事件分析</p>
                             <!--<img class="yuan2" v-show="itemHoverIndex==1?false:true" src="../../images/business_yuan.png">-->
@@ -65,18 +58,14 @@
                     <div class="top">
                         <img v-show="itemHoverIndex==2?false:true" src="../../images/03.png">
                         <img v-show="itemHoverIndex==2?true:false" src="../../images/03-1.png">
-                        <p>部门目录</p>
+                        <p>共享开放目录</p>
                     </div>
                     <div class="bot_box">
-                        <div class="bot">
-                            <p>腾讯移动分析（MTA） <a href="">详情</a>
-                                <br>
-                                  APP核心指标多维度分析、自定义事件统计</p>
-
-                            <p>HTML5数据分析 <a href="">详情</a>
-                                支持微信内H5页面流向分析、用户行为分析义事件分析</p>
-                            <p>微信小程序分析 <a href="">详情</a>
-                                微信小程序应用和客户分析、自定义事件分析</p>
+                        <div class="bot" :class="{scroll:item.text.length>3?true:false}">
+                            <h5>共享目录</h5>
+                            <p>总数&nbsp;578个&nbsp;&nbsp;&nbsp;占比&nbsp;87%</p>
+                            <h5>共享目录</h5>
+                            <p>总数&nbsp;578个&nbsp;&nbsp;&nbsp;占比&nbsp;87%</p>
                         </div>
                     </div>
                 </li>
@@ -199,9 +188,14 @@
                         right: 0;
                         top: 30px;
                     }
+                    h5{
+                        font-size: 14px;
+                        
+                    }
                     p {
                         font-size: 14px;
                         margin-bottom: 22px;
+                        color: #666666;
                     }
                     p:last-child{
                         margin-bottom: 0;

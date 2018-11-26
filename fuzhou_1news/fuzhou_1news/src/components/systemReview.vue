@@ -14,6 +14,7 @@
                                 <h5>僵尸系统 </h5>
                             </div>
                             <p>日均访问量少于5 使用频率.日均范围量</p>
+                            <p>数据规模小于1G</p>
                         </div>
 
                     </el-col>
@@ -24,6 +25,7 @@
                                 <h5>系统未上云 </h5>
                             </div>
                             <p>系统部署情况 自建机房</p>
+                            <p>租用机房</p>
                         </div>
 
                     </el-col>
@@ -35,6 +37,7 @@
                                 <h5>孤岛系统 </h5>
                             </div>
                             <p>网络环境 单机</p>
+                            <p>业务专网</p>
                         </div>
                     </el-col>
                 </el-row>
@@ -48,7 +51,7 @@
                 <div class="choice">
                     <p>部门分类：</p>
                     <el-radio-group v-model="radio">
-						<el-radio v-for="item in data2" :label="item">{{item}}</el-radio>
+						<el-radio v-for="(item,index) in data2" :label="item">{{item}}</el-radio>
 					</el-radio-group>    
                 </div>
                 <!--<div class="confirm">
@@ -108,8 +111,9 @@
 
 //              checkList: ['选中且禁用', '复选框 A'],
                 // flag:[0,0,0,0]
-                data2:['全部','第二','第三','第四','第五','第六','第七','第八','第九'],
-      			    radio:['全部'],
+      		    radio:'全部',
+
+                data2:['全部','台江区','仓山区','鼓楼区','晋安区','马尾区'],
             }
         }
     }
@@ -128,9 +132,11 @@
     .choice_box {
     	padding-left:20px ;
         background: #ffffff;
-        border-radius: 15px;
         overflow: hidden;
         margin-bottom: 10px;
+        p{
+            line-height: 25px;
+        }
         .top {
             height: 30px;
             line-height: 30px;
@@ -190,13 +196,12 @@
         background: #ffffff;
         padding: 0 30px 30px;
         overflow: hidden;
-        border-radius: 15px;
         margin-bottom: 10px;
         .top {
             overflow: hidden;
             h4 {
                 color: #4aa7fd;
-                font-size: 16px;
+                font-size: 18px;
                 margin-bottom: 18px;
                 font-weight: 400;
                 float: left;
@@ -232,10 +237,11 @@
                         font-size: 31px;
                         vertical-align: text-bottom;
                         margin-left: 10px;
+                        font-weight: bold;
                     }
                 }
                 p {
-                    margin-top: 35px;
+                    margin-top: 25px;
                     font-size: 16px;
                 }
                 /*padding: 0 120px;*/
@@ -247,7 +253,6 @@
     .paging {
         background: #fff;
         padding: 20px 30px 0px;
-        border-radius: 15px;
         overflow: hidden;
         .el-row {
             margin-bottom: 20px;
